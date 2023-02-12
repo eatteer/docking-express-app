@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: api
+    container_name: api
+    volumes:
+      - ./api:/api
+      - node_modules:/api/node_modules
+volumes:
+  node_modules:
